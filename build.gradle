@@ -102,7 +102,11 @@ publishing {
 test {
     useTestNG()
 }
-
+jar {
+    manifest {
+      attributes('Automatic-Module-Name': 'org.dom4j')
+    }
+}
 jacocoTestReport {
     reports {
         xml.enabled true
